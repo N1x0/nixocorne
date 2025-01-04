@@ -70,6 +70,15 @@
         tap-ms = <30>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        CAPS_WORD {
+            bindings = <&caps_word>;
+            key-positions = <32 37>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -79,7 +88,7 @@
 &kp ESCAPE  &kp Q            &kp W            &kp F         &kp P              &kp B                             &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
 &td0        &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SQT
 &kp LCTRL   &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
-                                              &kp RALT      &lt 1 SPACE        &lt 2 TAB                                               &lt 5 ENTER  &lt 3 BACKSPACE    &kp RALT
+                                              &kp RALT      &lt 1 SPACE        &lt 2 TAB                                               &lt 4 ENTER  &lt 3 BACKSPACE    &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -92,6 +101,8 @@
 &trans  &trans        &trans        &trans     &trans          &trans  &trans            &trans          &trans  &kp HOME   &none     &kp END    &kp BSPC  &trans
                                     &trans     &trans          &trans                                    &trans  &trans     &trans
             >;
+
+            label = "NAV";
         };
 
         NUM {
@@ -101,6 +112,8 @@
 &trans  &trans        &trans        &trans     &trans          &trans  &trans            &trans          &kp EQUAL  &kp N1  &kp N2   &kp N3  &kp ENTER        &trans
                                     &trans     &trans          &trans                                    &kp ENTER  &kp N0  &kp DOT
             >;
+
+            label = "NUM";
         };
 
         SYM {
@@ -110,15 +123,8 @@
 &trans  &trans            &kp LS(LEFT_BRACKET)  &trans  &kp LS(RIGHT_BRACKET)  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                                 &trans  &trans                 &trans                                    &trans  &trans  &trans
             >;
-        };
 
-        QWERTY {
-            bindings = <
-&kp TAB    &kp Q  &kp W  &kp E   &kp R   &kp T                     &trans          &kp Y   &kp U   &kp I   &kp O      &kp P     &kp LBKT
-&kp LSHFT  &kp A  &kp S  &kp D   &kp F   &kp G             &trans  &trans  &trans  &kp H   &kp J   &kp K   &kp L      &kp SEMI  &kp APOS
-&kp LCTRL  &kp Z  &kp X  &kp C   &kp V   &kp B   &trans            &trans          &kp B   &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH
-                         &trans  &trans  &trans                                    &trans  &trans  &trans
-            >;
+            label = "SYM";
         };
 
         GER {
@@ -128,6 +134,19 @@
 &trans  &trans     &trans  &trans     &trans  &trans  &trans            &trans          &trans  &trans  &trans     &trans  &trans     &trans
                            &trans     &trans  &trans                                    &trans  &trans  &trans
             >;
+
+            label = "GER";
+        };
+
+        QWERTY {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E   &kp R   &kp T                     &trans          &kp Y   &kp U   &kp I   &kp O      &kp P     &kp LBKT
+&kp LSHFT  &kp A  &kp S  &kp D   &kp F   &kp G             &trans  &trans  &trans  &kp H   &kp J   &kp K   &kp L      &kp SEMI  &kp APOS
+&kp LCTRL  &kp Z  &kp X  &kp C   &kp V   &kp B   &trans            &trans          &kp B   &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH
+                         &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
+
+            label = "QWERTY";
         };
     };
 };
