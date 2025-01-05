@@ -93,7 +93,7 @@
 &kp ESCAPE  &kp Q            &kp W            &kp F         &kp P              &kp B                             &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
 &td0        &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SQT
 &kp LCTRL   &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
-                                              &sl 4         &lt 1 SPACE        &lt 4 TAB                                               &lt 3 ENTER  &lt 2 BACKSPACE    &sl 6
+                                              &lt 4 ESCAPE  &lt 1 SPACE        &lt 4 TAB                                               &lt 3 ENTER  &lt 2 BACKSPACE    &lt 6 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -124,10 +124,10 @@
         SYM {
             label = "SYM";
             bindings = <
-&trans  &kp LS(LBKT)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(RBKT)                     &trans          &none  &none      &none      &none     &none     &trans
-&trans  &kp SEMI      &kp N4      &kp N5      &kp N6      &kp LS(EQUAL)            &trans  &trans  &trans  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp LS(BSLH)   &trans            &trans          &none  &none      &none      &none     &none     &trans
-                                  &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)                                    &none  &none      &none
+&trans  &kp LS(LBKT)   &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(RBKT)                     &trans          &none  &none      &none      &none     &none     &trans
+&trans  &kp LS(SEMI)   &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(EQUAL)            &trans  &trans  &trans  &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
+&trans  &kp LS(GRAVE)  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(BSLH)   &trans            &trans          &none  &none      &none      &none     &none     &trans
+                                   &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS)                                    &none  &none      &none
             >;
         };
 
