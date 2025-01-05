@@ -42,12 +42,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - {t: GER, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:keyboard-esc$$', h: GER}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:keyboard-tab$$', h: GER}
   - {t: '$$mdi:keyboard-return$$', h: SYM}
   - {t: '$$mdi:backspace$$', h: NUM}
-  - {t: FUN, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: FUN}
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -161,10 +161,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: ;, s: ':'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
+  - {t: Sft+ ;, s: 'Sft+ :'}
+  - {t: Sft+ 4, s: Sft+ $}
+  - {t: Sft+ 5, s: Sft+ %}
+  - {t: Sft+ 6, s: Sft+ ^}
   - {t: Sft+ =, s: Sft+ +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -176,10 +176,10 @@ layers:
   - LGUI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
+  - {t: Sft+ `, s: Sft+ ~}
+  - {t: Sft+ 1, s: Sft+ !}
+  - {t: Sft+ 2, s: Sft+ @}
+  - {t: Sft+ 3, s: 'Sft+ #'}
   - {t: Sft+ \, s: Sft+ |}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
