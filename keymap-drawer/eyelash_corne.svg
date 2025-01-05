@@ -779,6 +779,12 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="476" y="134" width="28" height="26" class="combo"/>
 <use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="481" y="138" height="18" width="18.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
+<g class="combo combopos-1">
+<path d="M784,91 l-37,0" class="combo"/>
+<path d="M784,91 l37,0" class="combo"/>
+<rect rx="6" ry="6" x="770" y="78" width="28" height="26" class="combo"/>
+<text x="784" y="91" class="combo tap">F2</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 637)" class="layer-NUM">
