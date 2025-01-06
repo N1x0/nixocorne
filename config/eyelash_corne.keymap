@@ -58,7 +58,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "NUM_WORD";
             #binding-cells = <0>;
-            continue-list = <NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0 MINUS PLUS KP_MULTIPLY KP_DIVIDE EQUAL KP_EQUAL LEFT_BRACE LEFT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACKET RIGHT_BRACE LEFT_PARENTHESIS>;
+            continue-list = <NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0 MINUS PLUS KP_MULTIPLY KP_DIVIDE EQUAL KP_EQUAL LEFT_BRACE LEFT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACKET RIGHT_BRACE LEFT_PARENTHESIS COMMA KP_COMMA DOT KP_DOT>;
             mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_LGUI)>;
         };
 
@@ -133,10 +133,10 @@
 
         NUM {
             bindings = <
-&trans  &trans  &trans  &kp LBKT            &kp RBKT      &trans                    &trans          &kp MINUS      &kp N7  &kp N8   &kp N9  &kp N8     &trans
-&trans  &trans  &trans  &kp LS(N9)          &kp LS(N0)    &trans            &trans  &trans  &trans  &kp EQUAL      &kp N4  &kp N5   &kp N6  &kp FSLH   &trans
-&trans  &trans  &trans  &kp LS(LEFT_BRACE)  &kp LS(RBKT)  &trans  &trans            &trans          &kp LS(EQUAL)  &kp N1  &kp N2   &kp N3  &kp COMMA  &trans
-                        &trans              &trans        &trans                                    &trans         &kp N0  &kp DOT
+&trans  &trans  &trans  &kp LBKT            &kp RBKT       &trans                       &trans          &kp MINUS      &kp N7  &kp N8   &kp N9  &kp LS(N8)  &trans
+&trans  &trans  &trans  &kp LS(N9)          &kp LS(N0)     &trans               &trans  &trans  &trans  &kp EQUAL      &kp N4  &kp N5   &kp N6  &kp FSLH    &trans
+&trans  &trans  &trans  &kp LS(LEFT_BRACE)  &kp LS(RBKT)   &trans     &trans            &trans          &kp LS(EQUAL)  &kp N1  &kp N2   &kp N3  &kp COMMA   &trans
+                        &trans              &kp BACKSPACE  &kp ENTER                                    &trans         &kp N0  &kp DOT
             >;
 
             label = "NUM";
