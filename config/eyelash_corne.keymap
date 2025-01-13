@@ -55,22 +55,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 43 44 45 46 47>;
             require-prior-idle-ms = <75>;
         };
-
-        NUM_WORD: NUM_WORD {
-            compatible = "zmk,behavior-caps-word";
-            label = "NUM_WORD";
-            #binding-cells = <0>;
-            continue-list = <NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0 MINUS PLUS KP_MULTIPLY KP_DIVIDE EQUAL KP_EQUAL LEFT_BRACE LEFT_BRACKET RIGHT_PARENTHESIS RIGHT_BRACKET RIGHT_BRACE LEFT_PARENTHESIS COMMA KP_COMMA DOT KP_DOT>;
-            mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_LGUI)>;
-        };
-
-        NAV_WORD: NAV_WORD {
-            compatible = "zmk,behavior-caps-word";
-            label = "NAV_WORD";
-            #binding-cells = <0>;
-            continue-list = <RIGHT_ARROW LEFT_ARROW DOWN_ARROW UP_ARROW PG_UP PG_DN HOME END>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
-        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -118,10 +102,10 @@
         default_layer {
             display-name = "Colemak";
             bindings = <
-&kp ESCAPE  &kp Q            &kp W            &kp F         &kp P              &kp B                             &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
-&NUM_WORD   &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SQT
-&NAV_WORD   &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
-                                              &sl 4         &lt 2 SPACE        &lt 3 TAB                                               &lt 4 ENTER  &lt 1 BACKSPACE    &sl 4
+&kp ESCAPE     &kp Q            &kp W            &kp F         &kp P              &kp B                             &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
+&kp BACKSPACE  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp DOUBLE_QUOTES
+&kp BACKSLASH  &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
+                                                 &sl 4         &lt 2 SPACE        &lt 3 TAB                                               &lt 6 ENTER  &lt 1 BACKSPACE    &sl 4
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -140,10 +124,10 @@
 
         NUM {
             bindings = <
-&trans  &trans  &trans  &kp LBKT            &kp RBKT      &trans                    &trans          &kp MINUS      &kp N7  &kp N8   &kp N9  &none            &trans
-&trans  &trans  &trans  &kp LS(N9)          &kp LS(N0)    &trans            &trans  &trans  &trans  &kp EQUAL      &kp N4  &kp N5   &kp N6  &kp KP_MULTIPLY  &trans
-&trans  &trans  &trans  &kp LS(LEFT_BRACE)  &kp LS(RBKT)  &trans  &trans            &trans          &kp LS(EQUAL)  &kp N1  &kp N2   &kp N3  &kp KP_DIVIDE    &trans
-                        &trans              &trans        &trans                                    &trans         &kp N0  &kp DOT
+&trans  &trans  &trans  &kp LBKT            &kp RBKT                   &trans                    &trans          &kp MINUS  &kp N7  &kp N8   &kp N9  &none            &trans
+&trans  &trans  &trans  &kp LS(N9)          &kp LS(RIGHT_PARENTHESIS)  &trans            &trans  &trans  &trans  &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp KP_MULTIPLY  &trans
+&trans  &trans  &trans  &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)        &trans  &trans            &trans          &kp PLUS   &kp N1  &kp N2   &kp N3  &kp KP_DIVIDE    &trans
+                        &trans              &trans                     &trans                                    &trans     &kp N0  &kp DOT
             >;
 
             label = "NUM";
@@ -151,10 +135,10 @@
 
         SYM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &kp LS(N7)    &kp LS(N8)     &kp LS(N9)        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(NUMBER_6)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)     &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans        &trans
+&trans  &trans        &trans        &trans     &trans          &trans                    &trans          &trans  &kp LS(N7)    &kp LS(N8)     &kp LS(N9)        &trans         &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans            &trans  &trans  &trans  &trans  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(NUMBER_6)  &trans         &trans
+&trans  &trans        &trans        &trans     &trans          &trans  &trans            &trans          &trans  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)     &kp BACKSLASH  &trans
+                                    &trans     &trans          &trans                                    &trans  &trans        &trans
             >;
 
             label = "SYM";
@@ -205,12 +189,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        FUN {
-            if-layers = <3 4>;
-            then-layer = <6>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
