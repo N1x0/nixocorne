@@ -62,7 +62,7 @@
             ignore-modifiers;
     };
   };
-    };
+    
 
     rgb_encoder: rgb_encoder {
         compatible = "zmk,behavior-sensor-rotate";
