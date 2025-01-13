@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <behaviors/num_word.dtsi
 
 /*
 
@@ -47,14 +48,21 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 43 44 45 46 47>;
             require-prior-idle-ms = <75>;
-        };
+        }; 
+
+        nav_word: nav_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
+            ignore-modifiers;
+    };
+  };
     };
 
     rgb_encoder: rgb_encoder {
@@ -103,7 +111,7 @@
             display-name = "Colemak";
             bindings = <
 &kp ESCAPE     &kp Q            &kp W            &kp F         &kp P              &kp B                             &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
-&kp BACKSPACE  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp DOUBLE_QUOTES
+&num_word NUM  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp DOUBLE_QUOTES
 &kp BACKSLASH  &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
                                                  &sl 4         &lt 2 SPACE        &lt 3 TAB                                               &lt 6 ENTER  &lt 1 BACKSPACE    &sl 4
             >;
