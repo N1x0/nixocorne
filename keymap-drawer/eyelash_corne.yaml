@@ -13,7 +13,7 @@ layers:
   - Y
   - {t: ;, s: ':'}
   - $$mdi:backspace-reverse-outline$$
-  - '&num_word 1'
+  - '&nav_word 1'
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
