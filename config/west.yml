@@ -6,9 +6,6 @@ manifest:
       # See:
       # - https://zmk.dev/docs/features/modules
       # - https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#projects
-    - name: urob
-      url-base: https://github.com/urob
-  projects:
     - name: eyelash_corne
       url: https://github.com/a741725193/zmk-new_corne
       revision: main
@@ -16,8 +13,5 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-auto-layer # autolayer import 
-      remote: urob
-      revision: main
   self:
     path: config
