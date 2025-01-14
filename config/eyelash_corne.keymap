@@ -60,7 +60,7 @@
         nav_word: nav_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP HOME END TAB C X V F2 F9 LEFT_BRACKET RIGHT_BRACKET>;
+            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP HOME END TAB C X V F2 F9 LBKT RBKT>;
             ignore-modifiers;
         };
     };
@@ -122,8 +122,8 @@
         NAV {
             bindings = <
 &trans  &trans        &trans        &kp F2     &kp F9          &trans                       &trans          &trans  &kp PG_UP  &kp UP    &kp PG_DN  &trans    &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans               &trans  &trans  &trans  &LC(LEFT_BRACKET)  &kp LEFT   &kp DOWN  &kp RIGHT  &trans    &trans
-&trans  &trans        &kp LC(X)     &kp LC(C)  &trans          &kp LC(V)  &trans            &trans          &LC(RIGHT_BRACKET)  &kp HOME   &none     &kp END    &kp BSPC  &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans               &trans  &trans  &trans  &LC(LBKT)  &kp LEFT   &kp DOWN  &kp RIGHT  &trans    &trans
+&trans  &trans        &kp LC(X)     &kp LC(C)  &trans          &kp LC(V)  &trans            &trans          &LC(RBKT)  &kp HOME   &none     &kp END    &kp BSPC  &trans
                                     &trans     &trans          &trans                                       &trans  &trans     &trans
             >;
 
