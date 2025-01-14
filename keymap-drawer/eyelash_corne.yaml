@@ -71,7 +71,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&LC(LBKT)'
+  - {t: 'Ctl+[', s: 'Ctl+{'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
@@ -85,7 +85,7 @@ layers:
   - Ctl+V
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&LC(RBKT)'
+  - {t: 'Ctl+]', s: 'Ctl+}'}
   - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - END
