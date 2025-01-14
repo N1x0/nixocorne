@@ -111,7 +111,7 @@
             display-name = "Colemak";
             bindings = <
 &kp ESCAPE     &kp Q            &kp W            &kp F         &kp P              &kp B                             &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
-&nav_word 1    &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp DOUBLE_QUOTES
+&nav_word 1    &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SINGLE_QUOTE
 &kp BACKSLASH  &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
                                                  &sl 4         &lt 2 SPACE        &lt 3 TAB                                               &lt 6 ENTER  &lt 1 BACKSPACE    &sl 4
             >;
