@@ -28,7 +28,7 @@ layers:
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
   - {t: O, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '''', s: '"'}
-  - '&num_word'
+  - '&num_word 2'
   - Z
   - X
   - C
