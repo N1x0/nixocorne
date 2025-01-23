@@ -10,6 +10,13 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+#define BASE 0
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define GER 4
+#define QWERTY 5
+#define FUN 6
 
 
 / {
@@ -88,8 +95,8 @@
             key-positions = <23 24>;
         };
 
-        SWAP_QWERTY {
-            bindings = <&tog 5>;
+        SWAP_QWERTY {,
+            bindings = <&tog QWERTY>;,
             key-positions = <8 9 10 11>;
         };
     };
@@ -101,9 +108,9 @@
             display-name = "Colemak";
             bindings = <
 &kp ESCAPE     &kp Q            &kp W            &kp F         &kp P              &kp B                             &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
-&nav_word 1    &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SINGLE_QUOTE
-&num_word 2    &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
-                                                 &sl 4         &lt 2 SPACE        &lt 3 TAB                                               &lt 6 ENTER  &lt 1 BACKSPACE    &sl 4
+&nav_word NAV    &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SINGLE_QUOTE
+&num_word NUM    &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
+                                                 &sl GER         &lt NUM SPACE        &lt SYM TAB                                               &lt FUN ENTER  &lt NAV BACKSPACE    &sl GER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -117,74 +124,66 @@
 &trans  &trans        &kp  LC(X)     &kp LC(C) &trans          &kp LC(V)  &trans            &trans          &kp LC(RBKT)  &kp HOME   &trans     &kp END    &kp BSPC  &trans
                                     &trans     &trans          &trans                                       &trans  &trans     &trans
             >;
-
-            
         };
 
         NUM {
+            display-name = "NUM";
             bindings = <
 &trans  &trans  &trans  &kp LBKT            &kp RBKT                   &trans                    &trans          &kp MINUS  &kp N7  &kp N8   &kp N9  &none            &trans
 &trans  &trans  &trans  &kp LS(N9)          &kp LS(RIGHT_PARENTHESIS)  &trans            &trans  &trans  &trans  &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp KP_MULTIPLY  &trans
 &trans  &trans  &trans  &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)        &trans  &trans            &trans          &kp PLUS   &kp N1  &kp N2   &kp N3  &kp KP_DIVIDE    &trans
                         &trans              &trans                     &trans                                    &trans     &kp N0  &kp DOT
             >;
-
-            label = "NUM";
         };
 
         SYM {
+            display-name = "SYM";
             bindings = <
 &trans  &trans        &trans        &trans     &trans          &trans                    &trans          &trans  &kp LS(N7)    &kp LS(N8)     &kp LS(N9)        &trans         &trans
 &trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans            &trans  &trans  &trans  &trans  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(NUMBER_6)  &trans         &trans
 &trans  &trans        &trans        &trans     &trans          &trans  &trans            &trans          &trans  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)     &kp BACKSLASH  &trans
                                     &trans     &trans          &trans                                    &trans  &trans        &trans
             >;
-
-            label = "SYM";
         };
 
         GER {
+            display-name = "GER";
             bindings = <
 &trans  &trans     &trans  &trans     &trans  &trans                    &trans          &trans  &trans  &kp RA(Y)  &trans  &trans     &trans
 &trans  &kp RA(Q)  &trans  &kp RA(S)  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans     &trans  &kp RA(P)  &trans
 &trans  &trans    &trans  &trans     &trans  &trans  &trans            &trans          &trans  &trans  &trans     &trans  &trans     &trans
                            &trans     &trans  &trans                                    &trans  &trans  &trans
             >;
-
-            label = "GER";
         };
 
         QWERTY {
+            display-name = "QWERTY";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E         &kp R   &kp T                    &trans          &kp Y   &kp U   &kp I   &kp O      &kp P     &kp LBKT
 &kp LSHFT  &kp A  &kp S  &kp D         &kp F   &kp G            &trans  &trans  &trans  &kp H   &kp J   &kp K   &kp L      &kp SEMI  &kp APOS
 &kp LCTRL  &kp Z  &kp X  &kp C         &kp V   &kp B  &trans            &trans          &kp B   &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH
                          &kp LEFT_ALT  &trans  &mo 7                                    &trans  &trans  &trans
             >;
-
-            label = "QWERTY";
-        };
+        };,
 
         FUN {
+            display-name = "FUN";
             bindings = <
 &trans          &bt BT_CLR     &trans         &trans         &trans         &trans                    &trans          &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
 &bt BT_CLR_ALL  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &trans            &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
 &trans          &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &trans  &trans            &trans          &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
                                               &trans         &trans         &trans                                    &trans  &trans  &trans
             >;
-
-            label = "FUN";
         };
 
         Gaming_Numbers {
+            display-name = "Gaming_Numbers";
             bindings = <
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
-
-            label = "Gaming_Numbers";
         };
     };
 
