@@ -95,7 +95,7 @@
             key-positions = <23 24>;
         };
 
-        SWAP_QWERTY {,
+        SWAP_QWERTY {
             bindings = <&tog QWERTY>;
             key-positions = <8 9 10 11>;
         };
