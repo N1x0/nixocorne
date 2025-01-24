@@ -164,7 +164,7 @@
 &kp LCTRL  &kp Z  &kp X  &kp C         &kp V   &kp B  &trans            &trans          &kp B   &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH
                          &kp LEFT_ALT  &trans  &mo 7                                    &trans  &trans  &trans
             >;
-        };,
+        };
 
         FUN {
             display-name = "FUN";
