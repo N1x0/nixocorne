@@ -92,6 +92,7 @@
         right_click {
             bindings = <&mkp RCLK>;
             key-positions = <24 25>;
+            layers = <1>;
         };
 
         SWAP_QWERTY {
