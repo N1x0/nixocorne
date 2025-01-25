@@ -5,11 +5,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
-
 #define BASE 0
 #define NAV 1
 #define NUM 2
@@ -17,7 +17,6 @@
 #define GER 4
 #define QWERTY 5
 #define FUN 6
-
 
 / {
     behaviors {
@@ -84,15 +83,15 @@
             key-positions = <32 37>;
         };
 
-        xcl_f2 {
-            bindings = <&kp F2>;
-            key-positions = <23 25>;
+        left_click {
+            bindings = <&mkp LCLK>;
+            key-positions = <23 24>;
             layers = <1>;
         };
 
-        f9 {
-            bindings = <&kp F9>;
-            key-positions = <23 24>;
+        right_click {
+            bindings = <&mkp RCLK>;
+            key-positions = <24 25>;
         };
 
         SWAP_QWERTY {
@@ -107,10 +106,10 @@
         default_layer {
             display-name = "Colemak";
             bindings = <
-&kp ESCAPE     &kp Q            &kp W            &kp F         &kp P              &kp B                             &kp UP                &kp J        &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
-&nav_word NAV    &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp M        &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SINGLE_QUOTE
-&num_word NUM    &kp Z            &kp X            &kp C         &kp D              &kp V      &kp SPACE              &kp DOWN              &kp K        &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
-                                                 &sl GER         &lt NUM SPACE        &lt SYM TAB                                               &lt FUN ENTER  &lt NAV BACKSPACE    &sl GER
+&kp ESCAPE     &kp Q            &kp W            &kp F         &kp P              &kp B                               &kp UP                &kp J          &kp L              &kp U         &kp Y            &kp SEMI         &kp DELETE
+&nav_word NAV  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp M          &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr LEFT_ALT I  &hmr LEFT_GUI O  &kp SINGLE_QUOTE
+&num_word NUM  &kp Z            &kp X            &kp C         &kp D              &kp V        &kp SPACE              &kp DOWN              &kp K          &kp H              &kp COMMA     &kp DOT          &kp FSLH         &kp ESC
+                                                 &sl GER       &lt NUM SPACE      &lt SYM TAB                                               &lt FUN ENTER  &lt NAV BACKSPACE  &sl GER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -119,10 +118,10 @@
         NAV {
             display-name = "NAV";
             bindings = <
-&trans  &trans        &trans        &kp F2     &kp F9          &trans                       &trans          &trans  &kp PG_UP  &kp UP    &kp PG_DN  &trans    &trans
+&trans  &trans        &trans        &kp F2     &kp F9          &trans                       &trans          &trans        &kp PG_UP  &kp UP    &kp PG_DN  &trans    &trans
 &trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans               &trans  &trans  &trans  &kp LC(LBKT)  &kp LEFT   &kp DOWN  &kp RIGHT  &trans    &trans
-&trans  &trans        &kp  LC(X)     &kp LC(C) &trans          &kp LC(V)  &trans            &trans          &kp LC(RBKT)  &kp HOME   &trans     &kp END    &kp BSPC  &trans
-                                    &trans     &trans          &trans                                       &trans  &trans     &trans
+&trans  &trans        &kp LC(X)     &kp LC(C)  &trans          &kp LC(V)  &trans            &trans          &kp LC(RBKT)  &kp HOME   &trans    &kp END    &kp BSPC  &trans
+                                    &trans     &trans          &trans                                       &trans        &trans     &trans
             >;
         };
 
@@ -151,7 +150,7 @@
             bindings = <
 &trans  &trans     &trans  &trans     &trans  &trans                    &trans          &trans  &trans  &kp RA(Y)  &trans  &trans     &trans
 &trans  &kp RA(Q)  &trans  &kp RA(S)  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans     &trans  &kp RA(P)  &trans
-&trans  &trans    &trans  &trans     &trans  &trans  &trans            &trans          &trans  &trans  &trans     &trans  &trans     &trans
+&trans  &trans     &trans  &trans     &trans  &trans  &trans            &trans          &trans  &trans  &trans     &trans  &trans     &trans
                            &trans     &trans  &trans                                    &trans  &trans  &trans
             >;
         };
